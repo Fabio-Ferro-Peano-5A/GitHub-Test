@@ -34,6 +34,7 @@ public class PrimoServer {
             for (;;) {
                 Socket s;
                 s = ss.accept();
+                // int i =s.getInputStream().read();
                 InputStreamReader isr= new InputStreamReader(s.getInputStream());
                 BufferedReader br = new BufferedReader(isr);
                 System.out.println("Il server ha ricevuto: " + br.readLine() );
